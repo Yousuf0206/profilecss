@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* Left side for the profile picture */
+.picture {
+  flex: 0 0 auto;
+  width: 150px; /* Adjust size as needed */
+  height: 150px;
+  border-radius: 50%; /* Makes the picture round */
+  margin-right: 20px; /* Space between picture and main content */
+}
+
+/* Right side for the main content, including navigation and heading */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Aligns items to the right */
+  text-align: right; /* Aligns text inside elements to the right */
+  padding: 20px;
+}
+
+/* Navigation bar styling */
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: right; /* Text within the nav is also right-aligned */
+  margin-bottom: 20px; /* Space below navigation bar */
+}
+
+/* Welcome heading */
+.welcome-heading {
+  font-size: 24px;
+  color: rgb(78, 108, 241); /* Customize color as needed */
+  margin-bottom: 10px;
+}

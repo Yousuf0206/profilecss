@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Navbar from "./navbar"; // Import the Navbar component
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
   weight: "100 900",
 });
+
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
@@ -20,15 +22,26 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        {/* Navbar Section */}
+        <header>
+          <Navbar /> {/* Use the imported Navbar component */}
+        </header>
+
+        {/* Main Content */}
+        <main>{children}</main>
+
+        {/* Footer Section */}
+        <footer>
+          <p style={{ textAlign: "center", padding: "10px 0" }}>
+            © {new Date().getFullYear()} MyPortfolio. All rights reserved.
+          </p>
+        </footer>
       </body>
     </html>
   );

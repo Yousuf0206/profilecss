@@ -1,0 +1,66 @@
+/* home.module.css */
+
+.main {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 40px; /* Space between image and content */
+}
+
+.imageContainer {
+  flex-shrink: 0; /* Prevents the image from shrinking */
+}
+
+.profileImage {
+  display: block;
+  object-fit: cover;
+  border-radius: 0; /* Removes any borders or rounded edges */
+}
+
+.content {
+  max-width: 700px;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0 0 20px 0;
+  color: #2c3e50;
+  line-height: 1.2;
+}
+
+.description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #4d565d;
+  margin-bottom: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .imageContainer {
+    margin-bottom: 20px;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+}
